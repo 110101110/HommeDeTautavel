@@ -167,3 +167,9 @@ footer {
 	/* CHANGE: We make this visible by default for Zappar */
 	display: block;
 }
+
+/* ZAPPAR TRANSPARENCY FIX */
+html,body {
+	background-color: transparent !important;
+	background: none !important;
+}
