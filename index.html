@@ -4,128 +4,41 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Musée de Tautavel Immersive Experience</title>
-	<style>
-		/* Simple CSS to make it look good on mobile */
-		body {
-			font-family: sans-serif;
-			margin: 0;
-			padding: 0;
-			background: #1a1a1a;
-			color: white;
-			text-align: center;
-		}
-
-		header {
-			padding: 20px;
-			background: #333;
-		}
-
-		h1 {
-			margin: 0;
-			font-size: 1.5rem;
-		}
-
-		p {
-			color: #ccc;
-		}
-
-		/* Grid for Project Cards */
-		.container {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-			padding: 20px;
-			gap: 20px;
-		}
-
-		.card {
-			background: #2a2a2a;
-			border-radius: 10px;
-			width: 300px;
-			overflow: hidden;
-			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-			transition: transform 0.2s;
-		}
-
-		.card:hover {
-			transform: scale(1.02);
-		}
-
-		.card img {
-			width: 100%;
-			height: 200px;
-			object-fit: cover;
-			background: #555;
-		}
-
-		.card-content {
-			padding: 15px;
-		}
-
-		.card-title {
-			font-size: 1.2rem;
-			margin-bottom: 10px;
-			font-weight: bold;
-		}
-
-		/* The Button */
-		.launch-btn {
-			display: inline-block;
-			background: #4CC3D9;
-			color: white;
-			text-decoration: none;
-			padding: 10px 20px;
-			border-radius: 5px;
-			font-weight: bold;
-		}
-
-		.launch-btn:hover {
-			background: #3aaaca;
-		}
-
-		footer {
-			margin-top: 40px;
-			padding: 20px;
-			font-size: 0.8rem;
-			color: #777;
-		}
-	</style>
+	<title>AR Portfolio</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="home-body">
 
 	<header>
-		<h1>My 3D AR Portfolio</h1>
-		<p>Select a scene below to launch Augmented Reality</p>
+		<h1>My 3D AR Collection</h1>
+		<p>Select a scene below to view in Augmented Reality</p>
 	</header>
 
 	<div class="container">
 
 		<div class="card">
-			<img src="thumbnails/thumb1.jpg" alt="Scene 1 Preview">
+			<img src="assets/thumb1.jpg" alt="Fred Preview" style="background-color: #4CC3D9;">
 			<div class="card-content">
-				<div class="card-title">Dancing Robot</div>
-				<p>A character animation loop created in Blender.</p>
-				<br>
-				<a href="scene1.html" class="launch-btn">Launch AR Scene</a>
+				<div class="card-title">Fred Flintstone</div>
+				<div class="card-desc">Low poly character study. Locked scale at 50%.</div>
+				<a href="scene1.html" class="launch-btn">Launch Scene</a>
 			</div>
 		</div>
 
 		<div class="card">
-			<img src="thumbnails/thumb2.jpg" alt="Scene 2 Preview">
+			<img src="" alt="Coming Soon" style="background-color: #555;">
 			<div class="card-content">
-				<div class="card-title">Floating Logo</div>
-				<p>3D interactive brand logo with metallic textures.</p>
-				<br>
-				<a href="scene2.html" class="launch-btn">Launch AR Scene</a>
+				<div class="card-title">Project Two</div>
+				<div class="card-desc">More interactive models coming soon.</div>
+				<a href="#" class="launch-btn" style="background: #666; pointer-events: none;">Coming Soon</a>
 			</div>
 		</div>
 
 	</div>
 
 	<footer>
-		<p>Instructions: Click "Launch", allow camera access, and point at the Hiro Marker.</p>
+		<p>Works on Android (Chrome) & iOS (WebXR Viewer App)</p>
 	</footer>
 
 </body>
