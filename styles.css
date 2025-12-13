@@ -115,7 +115,7 @@ footer {
 }
 
 /* =========================================
-   AR OVERLAY STYLES (Buttons inside Camera)
+   AR OVERLAY STYLES (Zappar Optimized)
    ========================================= */
 #overlay {
 	position: absolute;
@@ -163,6 +163,7 @@ footer {
 	background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
 	padding: 20px;
 	padding-bottom: 40px;
-	display: none;
-	/* Hidden by default */
+
+	/* CHANGE: We make this visible by default for Zappar */
+	display: block;
 }

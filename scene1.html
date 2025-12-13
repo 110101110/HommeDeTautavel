@@ -4,37 +4,37 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-	<title>Fred AR Experience</title>
+	<title>Fred AR (Zappar)</title>
 
-	<script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+	<script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+
+	<script src="https://libs.zappar.com/zappar-aframe/2.0.0/zappar-aframe.js"></script>
 
 	<link rel="stylesheet" href="styles.css">
-	<script src="ar-logic.js"></script>
+
+	<script src="zappar-logic.js"></script>
 </head>
 
-<body style="margin: 0; overflow: hidden;">
+<body>
 
 	<div id="overlay">
 		<a href="index.html" class="ui-btn">← Home</a>
-		<div id="hint-text" class="ui-hint">Scan floor & Tap to Place</div>
+		<div id="hint-text" class="ui-hint" style="display: block;">Tap screen to place Fred</div>
 	</div>
 
-	<a-scene webxr="optionalFeatures: hit-test, dom-overlay; overlayElement: #overlay" ar-controller
-		renderer="colorManagement: true; physicalLights: true;">
+	<a-scene zappar-logic renderer="colorManagement: true;">
 
-		<a-assets>
-			<a-asset-item id="my-model" src="assets/fred.glb"></a-asset-item>
-		</a-assets>
+		<a-entity camera zappar-camera></a-entity>
 
-		<a-ring id="reticle" color="white" radius-inner="0.10" radius-outer="0.15" rotation="-90 0 0" visible="false"
-			material="shader: flat; opacity: 0.8;">
-		</a-ring>
+		<a-entity zappar-instant="placement-mode: true" id="instant-tracker">
 
-		<a-entity id="art-piece" gltf-model="#my-model" scale="0.5 0.5 0.5" visible="false" shadow="receive: false">
+			<a-entity gltf-model="assets/fred.glb" scale="0.5 0.5 0.5" position="0 0 -3" rotation="0 0 0">
+			</a-entity>
+
 		</a-entity>
 
-		<a-light type="directional" position="1 4 2" intensity="1.2" cast-shadow="true"></a-light>
-		<a-light type="ambient" color="#FFF" intensity="0.6"></a-light>
+		<a-entity light="type: directional; intensity: 1;" position="1 4 2"></a-entity>
+		<a-entity light="type: ambient; intensity: 0.5;"></a-entity>
 
 	</a-scene>
 
