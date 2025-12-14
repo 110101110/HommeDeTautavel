@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mammuthus trogontherii</title>
+
+	<link rel="stylesheet" href="style.css">
+
+	<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+</head>
+
+<body class="ar-page">
+
+	<a href="index.html" class="back-btn">← Back</a>
+
+	<model-viewer
+		src="assets/mammoth.glb"
+		ios-src="assets/mammoth.usdz"
+		alt="mammoth"
+		ar
+		ar-modes="webxr scene-viewer quick-look"
+		ar-scale="fixed"
+		ar-placement="floor"
+		orientation="0deg 0deg -90deg"
+		shadow-intensity="1"
+		camera-controls touch-action="pan-y">
+
+		<button slot="ar-button" id="ar-button">
+			View in AR 📸
+		</button>
+
+	</model-viewer>
+
+</body>
+
+</html>
