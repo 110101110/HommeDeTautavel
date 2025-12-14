@@ -1,159 +1,173 @@
-/* =========================================
-   GLOBAL DEFAULTS
-   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@300;400;500;600;700&display=swap');
+
 body {
 	margin: 0;
 	padding: 0;
-	font-family: sans-serif;
+	font-family: 'Cormorant Unicase', sans-serif;
 	box-sizing: border-box;
+	color: #333;
 }
 
-/* =========================================
-   HOMEPAGE STYLES (Dark Theme)
-   ========================================= */
-/* Only applies to <body class="home-page"> */
 .home-page {
-	background: #1a1a1a;
-	color: white;
+	background-image: url('assets/chasseurs-rhinoceros-tautavel-1024x671.jpg');
+
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+
+	min-height: 100vh;
 	text-align: center;
 }
 
+/* Glassy Header */
 .home-page header {
-	padding: 20px;
-	background: #333;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+	padding: 30px;
+	/* Made it slightly more white so text is readable over the image */
+	background: rgba(255, 255, 255, 0.25);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .home-page h1 {
 	margin: 0;
-	font-size: 1.5rem;
+	font-size: 3rem;
+	color: #4CC3D9;
+	text-transform: uppercase;
+	text-shadow: 0 2px 4px rgba(255, 255, 255, 0.25);
+	letter-spacing: 2px;
 }
 
-.home-page p {
-	color: #ccc;
-}
 
-/* Card Grid */
 .container {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	padding: 20px;
-	gap: 20px;
+	padding: 40px 20px;
+	gap: 30px;
 }
 
 .card {
-	background: #2a2a2a;
-	border-radius: 10px;
 	width: 300px;
-	overflow: hidden;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-	transition: transform 0.2s;
-	border: 1px solid #444;
+	background: rgba(255, 255, 255, 0.25);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+
+	/* SHARP EDGES */
+	border-radius: 0;
+	transition: transform 0.2s, background 0.2s;
 }
 
 .card:hover {
-	transform: scale(1.02);
+	transform: translateY(-5px);
+	background: rgba(255, 255, 255, 0.4);
 }
 
 .card img {
 	width: 100%;
-	height: 200px;
+	height: 220px;
 	object-fit: cover;
-	background: #555;
-	border-bottom: 1px solid #444;
+	/* Added opacity so it blends slightly with the glass feel */
+	border-bottom: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 .card-content {
-	padding: 15px;
+	padding: 20px;
+	text-align: left;
 }
 
 .card-title {
-	font-size: 1.2rem;
+	font-size: 1.5rem;
 	margin-bottom: 10px;
-	font-weight: bold;
-	color: white;
+	font-weight: 600;
+	color: #222;
+	text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
+/* Launch Button */
 .launch-btn {
-	display: inline-block;
+	display: block;
 	background: #4CC3D9;
 	color: white;
 	text-decoration: none;
-	padding: 10px 20px;
-	border-radius: 5px;
-	font-weight: bold;
+	padding: 15px 0;
+	text-align: center;
+	font-size: 1.1rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 	transition: background 0.3s;
+	border-radius: 0;
+	box-shadow: 0 4px 15px rgba(76, 195, 217, 0.4);
 }
 
 .launch-btn:hover {
-	background: #3aaaca;
+	background: #4CC3D9;
 }
 
 footer {
 	margin-top: 40px;
 	padding: 20px;
-	font-size: 0.8rem;
-	color: #777;
+	font-size: 1.5rem;
+	color: white;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+	/* Shadow to read against any image */
 }
 
-/* =========================================
-   AR SCENE STYLES (Light Theme)
-   ========================================= */
-/* Only applies to <body class="ar-page"> */
 .ar-page {
-	background-color: #f0f0f0;
+	background-color: #fff;
 	height: 100vh;
 	overflow: hidden;
 	width: 100vw;
 }
 
-/* The 3D Viewer */
 model-viewer {
 	width: 100%;
 	height: 100%;
 	--poster-color: transparent;
 }
 
-/* The "View in AR" Button */
 #ar-button {
 	position: absolute;
 	bottom: 50px;
 	left: 50%;
 	transform: translateX(-50%);
-	background-color: #007bff;
-	/* Blue */
+	background: rgba(93, 198, 18, 0.9);
+	backdrop-filter: blur(5px);
 	color: white;
-	border-radius: 30px;
-	border: none;
-	padding: 15px 30px;
-	font-family: sans-serif;
-	font-weight: bold;
-	font-size: 18px;
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+	border: 2px solid white;
+	padding: 15px 40px;
+	font-family: 'Cormorant Unicase', sans-serif;
+	font-weight: 600;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 	z-index: 100;
 	display: flex;
 	align-items: center;
 	gap: 10px;
 	cursor: pointer;
+	border-radius: 0;
 }
 
 #ar-button:active {
 	transform: translateX(-50%) scale(0.95);
 }
 
-/* The "Back" Button Overlay */
 .back-btn {
 	position: absolute;
 	top: 20px;
 	left: 20px;
 	z-index: 1000;
-	background: rgba(0, 0, 0, 0.5);
-	color: white;
+	background: rgba(255, 255, 255, 0.6);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	color: #333;
 	text-decoration: none;
-	padding: 10px 15px;
-	border-radius: 20px;
-	font-weight: bold;
-	font-family: sans-serif;
-	backdrop-filter: blur(5px);
+	padding: 10px 20px;
+	font-weight: 600;
+	font-family: 'Cormorant Unicase', sans-serif;
+	text-transform: uppercase;
+	border-radius: 0;
 }
