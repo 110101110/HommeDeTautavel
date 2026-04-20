@@ -40,9 +40,9 @@ Client-side static website that serves AR pages and 3D assets; simple, lightweig
 
 ## Team — Credits & Contacts
 
-- Charlotte Hénique — charlotte.1.hq@gmail.com — github.com/chheniqu
-- Ophelia Marboeuf — m.opheliaa@gmail.com — github.com/opheliamarboeuf
-- Qiutong Zhang — zqt1998@gmail.com — github.com/110101110
+- Charlotte Hénique — [github.com/chheniqu](https://github.com/chheniqu) — [charlotte.1.hq@gmail.com](mailto:charlotte.1.hq@gmail.com)
+- Ophélia Marboeuf — [github.com/opheliamarboeuf](https://github.com/opheliamarboeuf) — [m.opheliaa@gmail.com](mailto:m.opheliaa@gmail.com)
+- Qiutong Zhang — [github.com/110101110](https://github.com/110101110) — [zqt1998@gmail.com](mailto:zqt1998@gmail.com)
 
 ## 3D Model Credits (Sketchfab / Open Source)
 
