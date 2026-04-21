@@ -1,6 +1,5 @@
 # HommeDeTautavel
 
-*a web AR project created for an immersive museum experience*
 
 
 ## Elevator pitch
