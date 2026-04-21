@@ -1,6 +1,6 @@
 # HommeDeTautavel
 
-
+*a web AR project created for an immersive museum experience*
 
 ## Elevator pitch
 Scan a QR code with a smartphone to visualize life-size 3D reconstructions and animated scenes of prehistoric animals and hominins in AR. The demo is fully functional and includes four open-source 3D models — designed to be recreational and educational for museum visitors.
